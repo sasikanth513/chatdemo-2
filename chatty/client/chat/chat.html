@@ -25,9 +25,13 @@
 </template>
 
 <template name="messages">
+{{#if room}}
     {{#each msgs}}
     <strong>{{name}}:</strong> {{text}}<br>
     {{/each}}
+{{else}}
+    <h3>No room selected</h3>
+{{/if}}
 </template>
 
 <template name="input">

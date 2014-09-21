@@ -30,6 +30,15 @@ Template.messages.helpers({
     'msgs': function(){
         var result = ChatRooms.findOne({_id: Session.get('roomid')});
         return result.messages;
+    },
+    'room':function(){
+        if(Session.get("roomid"))
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 });
 
